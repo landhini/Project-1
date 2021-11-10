@@ -97,9 +97,9 @@ The easiest way to copy the playbooks is to use Git.
 Run the commands below to download the files using git:
 $ cd /etc/ansible
 $ mkdir files
-## Clone Repository + IaC Files
+#### Clone Repository + IaC Files
 $ git clone https://github.com/landhini/project-1.git
-## Move Playbooks and hosts file Into `/etc/ansible`
+#### Move Playbooks and hosts file Into `/etc/ansible`
 $ cp project-1/playbooks/* .
 $ cp project-1/files/* ./files
 
