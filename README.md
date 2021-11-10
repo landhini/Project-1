@@ -115,11 +115,14 @@ SSH into the control node and follow the steps below:
  [elk]
  10.0.0.8
 
-- Run the playbooks by running the followind commands:
+- Run the playbooks by running the following commands:
 
  cd /etc/ansible
+ 
  $ ansible-playbook install_elk.yml elk
+ 
  $ ansible-playbook install_filebeat.yml webservers
+ 
  $ ansible-playbook install_metricbeat.yml webservers
 
 - navigate to or curl http://10.0.0.8:5601 to check that the installation worked as expected.
