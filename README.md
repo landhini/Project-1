@@ -96,15 +96,20 @@ In order to use the playbook, you will need to have an Ansible control node alre
 The easiest way to copy the playbooks is to use Git.
 Run the commands below to download the files using git:
  
+ 
   $ cd /etc/ansible
   
   $ mkdir files
 
+
 #### Clone Repository + IaC Files
+  
   
   $ git clone https://github.com/landhini/project-1.git
 
+
 #### Move Playbooks and hosts file Into `/etc/ansible`
+  
   
   $ cp project-1/playbooks/* .
 
@@ -126,6 +131,7 @@ SSH into the control node and follow the steps below:
 
 - Run the playbooks by running the following commands:
 
+ 
  $ cd /etc/ansible
  
  $ ansible-playbook install_elk.yml elk
@@ -133,6 +139,7 @@ SSH into the control node and follow the steps below:
  $ ansible-playbook install_filebeat.yml webservers
  
  $ ansible-playbook install_metricbeat.yml webservers
+
 
 - navigate to or curl http://10.0.0.8:5601 to check that the installation worked as expected.
 
