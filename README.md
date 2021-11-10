@@ -23,7 +23,7 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly availible, in addition to restricting traffic to the network. Load balancers do this by evenly distributing website traffic on to multiple hardware servers. Load balancers make a website secure by midigating against Denial of Service attacks. A jump box VM provides a single acess point from internet into your local network, effectively reducing the attack surface of your network. 
+Load balancing ensures that the application will be highly availible, in addition to restricting traffic to the network. Load balancers do this by evenly distributing website traffic on to multiple hardware servers. Load balancers make a website secure by mitigating against Denial of Service attacks. A jump box VM provides a single access point from the internet into your local network, effectively reducing the attack surface of your network. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems of the VMs on the network and system metrics.
 - Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
@@ -58,7 +58,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually. This is an advantage because using Ansible to automate the configuration of the ELK machine allows the quick deploytation of the ELK server. This is especially useful if data is comprimised or corrupted, one can simply delete an existing machine and quickly ,as well as effortlessly, deploy a new one that already has all the right configurations. 
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually. This is an advantage because using Ansible to automate the configuration of the ELK machine allows the quick deploytation of the ELK server. This is especially useful if data is comprimised or corrupted. One can simply delete an existing machine and quickly ,as well as effortlessly, deploy a new one that already has all the right configurations. 
 
 The playbook implements the following tasks:
 - Install Docker
@@ -68,8 +68,10 @@ The playbook implements the following tasks:
 - Download and launch a docker elk container
 
 To use this playbook, one must log into the Jump Box, then issue:
-- ansible-playbook install_elk.yml elk. 
-This runs the install_elk.yml playbook on the elk host.
+
+    $ ansible-playbook ELK-Config.yaml elk. 
+
+This runs the ELK-Config.yaml playbook on the elk host.
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -134,11 +136,11 @@ SSH into the control node and follow the steps below:
  
         $ cd /etc/ansible
  
-        $ ansible-playbook install_elk.yml elk
+        $ ansible-playbook ELK-Config.yaml elk
  
-        $ ansible-playbook install_filebeat.yml webservers
+        $ ansible-playbook beats-config webservers
  
-        $ ansible-playbook install_metricbeat.yml webservers
+  - Note: The playbook to install filebeat can made by modifing the beats-config file.
 
 
 - navigate to or curl http://10.0.0.8:5601 to check that the installation worked as expected.
