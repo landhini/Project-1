@@ -97,48 +97,48 @@ The easiest way to copy the playbooks is to use Git.
 Run the commands below to download the files using git:
  
  
-  $ cd /etc/ansible
+    $ cd /etc/ansible
   
-  $ mkdir files
+    $ mkdir files
 
 
 #### Clone Repository + IaC Files
   
   
-  $ git clone https://github.com/landhini/project-1.git
+    $ git clone https://github.com/landhini/project-1.git
 
 
 #### Move Playbooks and hosts file Into `/etc/ansible`
   
   
-  $ cp project-1/playbooks/* .
+    $ cp project-1/playbooks/* .
 
-  $ cp project-1/files/* ./files
+    $ cp project-1/files/* ./files
 
 SSH into the control node and follow the steps below:
 - Copy the playbook files to Ansible Control Node.
 - Update the hosts file to include which VMs to run each playbook on. It should look like the following:
 
- [webservers]
+    [webservers]
  
- 10.0.0.5
+    10.0.0.5
  
- 10.0.0.6
+    10.0.0.6
 
- [elk]
+    [elk]
  
- 10.0.0.8
+    10.0.0.8
 
 - Run the playbooks by running the following commands:
 
  
- $ cd /etc/ansible
+    $ cd /etc/ansible
  
- $ ansible-playbook install_elk.yml elk
+    $ ansible-playbook install_elk.yml elk
  
- $ ansible-playbook install_filebeat.yml webservers
+    $ ansible-playbook install_filebeat.yml webservers
  
- $ ansible-playbook install_metricbeat.yml webservers
+    $ ansible-playbook install_metricbeat.yml webservers
 
 
 - navigate to or curl http://10.0.0.8:5601 to check that the installation worked as expected.
