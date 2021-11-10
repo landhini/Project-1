@@ -90,13 +90,15 @@ These Beats allow us to collect the following information from each machine:
 
 The playbook below installs Metricbeat on the target hosts. The playbook for installing Filebeat is not included, but looks essentially identical — simply replace metricbeat with filebeat, and it will work as expected.
 
-Project-1/AnsiblePlaybook/beats-config
+![link](Project-1/AnsiblePlaybook/beats-config)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. We use the jump box for this purpose. 
 
 The easiest way to copy the playbooks is to use Git.
 Run the commands below to download the files using git:
+
+#### Make a files directory
  
  
     $ cd /etc/ansible
