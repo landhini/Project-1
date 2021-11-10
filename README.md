@@ -96,13 +96,19 @@ In order to use the playbook, you will need to have an Ansible control node alre
 The easiest way to copy the playbooks is to use Git.
 Run the commands below to download the files using git:
  
-  cd /etc/ansible
-  mkdir files
+  $ cd /etc/ansible
+  
+  $ mkdir files
+
 #### Clone Repository + IaC Files
-  git clone https://github.com/landhini/project-1.git
+  
+  $ git clone https://github.com/landhini/project-1.git
+
 #### Move Playbooks and hosts file Into `/etc/ansible`
-  cp project-1/playbooks/* .
-  cp project-1/files/* ./files
+  
+  $ cp project-1/playbooks/* .
+
+  $ cp project-1/files/* ./files
 
 SSH into the control node and follow the steps below:
 - Copy the playbook files to Ansible Control Node.
@@ -111,6 +117,7 @@ SSH into the control node and follow the steps below:
  [webservers]
  
  10.0.0.5
+ 
  10.0.0.6
 
  [elk]
