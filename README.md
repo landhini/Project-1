@@ -11,7 +11,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   Project-1/AnsibleConfig/ansible_config.yml
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -23,15 +23,15 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly availible, in addition to restricting traffic to the network.
 - Load balancers help by evenly distributing website traffic on to multiple hardware servers. Load balancers make a website secure by midigating against Denial of Service attacks. A jump box VM provides a single acess point from internet into your local network, effectively reducing the attack surface of your network. 
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the [chicken] and system [_____].
 - Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
 - Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-- Note: This IP Addresses are examples of the would be assigned to the each respective VM.
+- Note: These IP Addresses are examples of what can be assigned to each respective VM.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -44,8 +44,7 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from any whitelisted IP. For example, 
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
@@ -61,16 +60,13 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- Using Ansible to automate the configuration of the ELK machine allows the quick deploytation of the ELK server. This is especially useful if data is comprimised or corrupted, one can simply delete an existing machine and quickly ,as well as effortlessly, deploy a new one that already has all the right configurations. 
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ...
 - ...
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
