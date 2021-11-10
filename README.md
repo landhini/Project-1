@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the AnsibleConfig file may be used to install only certain pieces of it, such as Filebeat.
 
-  Project-1/AnsibleConfig
+![AnsibleConfig](./AnsiblePlaybook)
 
 This document contains the following details:
 - Description of the Topology
@@ -90,7 +90,6 @@ These Beats allow us to collect the following information from each machine:
 
 The playbook below installs Metricbeat on the target hosts. The playbook for installing Filebeat is not included, but looks essentially identical — simply replace metricbeat with filebeat, and it will work as expected.
 
-![beats-config](./AnsiblePlaybook/beats-config)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. We use the jump box for this purpose. 
@@ -124,13 +123,10 @@ Run the commands below to download the files using git:
 - Update the hosts file to include which VMs to run each playbook on. It should look like the following:
 
         [webservers]
- 
         10.0.0.5
- 
         10.0.0.6
 
         [elk]
- 
         10.0.0.8
 
 - Run the playbooks by running the following commands:
