@@ -109,15 +109,17 @@ SSH into the control node and follow the steps below:
 - Update the hosts file to include which VMs to run each playbook on. It should look like the following:
 
  [webservers]
+ 
  10.0.0.5
  10.0.0.6
 
  [elk]
+ 
  10.0.0.8
 
 - Run the playbooks by running the following commands:
 
- cd /etc/ansible
+ $ cd /etc/ansible
  
  $ ansible-playbook install_elk.yml elk
  
