@@ -8,7 +8,7 @@ Project-1/Diagrams/Network_Diagram.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible_config.yml file may be used to install only certain pieces of it, such as Filebeat.
 
-  Project-1/AnsibleConfig/ansible_config.yml
+  ![image](Project-1/AnsibleConfig/ansible_config.yml)
 
 This document contains the following details:
 - Description of the Topology
